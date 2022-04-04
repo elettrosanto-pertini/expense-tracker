@@ -9,7 +9,7 @@ const rowMarkup = `
 //*********************************************************
 // don't try this at home
 Number.prototype.arrotonda = function (digits, base) {
-    let multiplier = Math.pow(base || 10, digits);
+    let multiplier = Math.pow(base = 10, digits);
     return Math.round(this * multiplier) / multiplier
 }
 //*********************************************************
