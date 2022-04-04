@@ -1,0 +1,133 @@
+*{
+    box-sizing: border-box;
+}
+html{
+    height: 100%;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+body{
+    height:100%;
+}
+.container{
+    display:grid;
+    gap: 10px;
+    height:100%;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: 10% auto 10%;
+    grid-template-areas:
+    ". . . t t t t t t . . ."
+    ". . . c c c c c c . . ."
+    ". . . . . . . . . . . .";
+}
+
+.content{
+    grid-area:c;
+    background-color: rgba(89, 236, 133, 0.43);;
+    display:flex;
+    flex-direction:column;
+    padding:20px;
+    border-radius: 5px;
+    box-shadow: 3px 3px 10px 4px #bbb;
+
+}
+
+.title{
+    grid-area:t;
+    font-size:24px;
+    font-weight:bold;
+    text-align: center;
+}
+
+.table-column{
+    text-align: center;
+    width:33%;
+}
+
+.row-data{
+    border: 1px;
+    border-bottom: 1px solid #bbb;
+}
+
+.interfaccia{
+    margin-bottom: 30px;
+    display:flex;
+    flex-direction: row;
+    justify-content:space-evenly;
+    flex-wrap:nowrap;
+}
+
+.interfaccia-item{
+    width:fit-content;
+    border-radius: 3px;
+    border:none;
+    padding:5px;
+}
+
+.bottone{
+    padding:7px;
+    color:#fff;
+    font-weight:bold;
+}
+    .verde{
+        background-color:rgb(63, 196, 63);
+    }
+        .verde:hover{
+            color:rgb(63, 196, 63);
+            background-color: #ddd;
+            cursor:pointer;
+        }
+    .giallo{
+        background-color:rgb(233, 132, 37);
+    }
+        .giallo:hover{
+            color:rgb(233, 132, 37);
+            background-color: #ddd;
+            cursor:pointer;
+        }
+
+@media screen and (max-width:990px){
+    .interfaccia{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+        align-content: center;
+        height: 105px;
+    }
+    .bottone{
+        padding: 7px;
+        color: #fff;
+        font-weight: bold;
+        margin-left: 9px;
+    }
+}
+
+@media screen and (max-width:435px){
+    
+    
+    .interfaccia{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+        align-content: center;
+        height: 105px;
+    }
+    .bottone{
+        padding: 7px;
+        color: #fff;
+        font-weight: bold;
+        margin-left: 9px;
+    }
+    .container{
+        display:grid;
+        gap: 10px;
+        height:100%;
+        grid-template-columns: repeat(6, 1fr);
+        grid-template-rows: 10% auto 10%;
+        grid-template-areas:
+        ". t t t t ."
+        ". c c c c ."
+        ". . . . . .";
+    }
+}

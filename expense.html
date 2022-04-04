@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- HELLLL NAH!! <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">-->
+    <link rel="stylesheet" href="stile.css">
+    <title>Expense Tracker</title>
+</head>
+<body>
+    <div class="container">
+        <h1 class="title">EXPENSE TRACKER</h1>
+        <div class="content">
+            <div id="interfaccia" class="interfaccia">
+                <input type="text" name="Descrizione" id="descrizioneInput" placeholder="La tua spesa" maxlength="15" class="interfaccia-item">
+                <input type="text" name="Importo" id="importoInput" placeholder="€" class="interfaccia-item">
+                <div>
+                    <button type="button" id="posta-btn" onclick="postaSpesa()" class="interfaccia-item bottone verde" disabled>Posta</button>
+                    <button type="button"  id="resetta-btn" onclick="resettaSpesa()" class="interfaccia-item bottone giallo">Resetta</button>
+                </div>
+            </div>
+            <table id="lista">
+                <caption>LE TUE SPESE</caption>
+                <p>Totale: € <span id="totale-spese"></span></p>
+                <thead id="lista-head">
+                    <tr>
+                        <th class="table-column">Descrizione</th>
+                        <th class="table-column">Importo</th>
+                        <th class="table-column"></th>
+                    </tr>
+                </thead>
+                <tbody id=lista-body>
+
+                </tbody>
+            </table>
+        </div>
+    </div>
+</body>
+<!--<script src="main.js"></script>-->
+<script src="copiaMain.js"></script>
+</html>
