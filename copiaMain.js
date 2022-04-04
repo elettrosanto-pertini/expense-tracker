@@ -8,7 +8,7 @@ const rowMarkup = `
 
 //*********************************************************
 // don't try this at home
-Number.prototype.toFixedNumber = function (digits, base) {
+Number.prototype.arrotonda = function (digits, base) {
     let multiplier = Math.pow(base || 10, digits);
     return Math.round(this * multiplier) / multiplier
 }
@@ -47,7 +47,7 @@ function updateTotal(newTotal){
 
 //add expense to list
 function postaSpesa() {
-    totPrezzi = parseFloat(totPrezzi).toFixedNumber(2) + parseFloat(importo.value).toFixedNumber(2);
+    totPrezzi = parseFloat(totPrezzi).arrotonda(2) + parseFloat(importo.value).arrotonda(2);
 
     createRow();
     fillRow();
@@ -69,8 +69,8 @@ function eliminaRiga(questo) {
     let myBody = myRow.parentNode;                               //
     let newTotale = parseFloat(totPrezzi) - parseFloat(myPrezzo.innerText);
 
-    totale.textContent = newTotale.toFixedNumber(2);    //aggiorno nodo che mostra il totale
-    totPrezzi = newTotale.toFixedNumber(2);          //aggiorno il totale
+    totale.textContent = newTotale.arrotonda(2);    //aggiorno nodo che mostra il totale
+    totPrezzi = newTotale.arrotonda(2);          //aggiorno il totale
 
     myBody.removeChild(myRow);      //elimino child
 }
