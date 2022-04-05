@@ -38,7 +38,7 @@ function fillRow(){
 }
 
 function updateTotal(newTotal){
-    totale.textContent = `${newTotal.toFixedNumber(2)}`;
+    totale.textContent = `${newTotal.arrotonda(2)}`;
 }
 
 //****************************************************************************************************
